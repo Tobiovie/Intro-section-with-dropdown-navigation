@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html{
+  font-size: clamp(10px,0.9vw,16px);
+  font-family: 'Epilogue', sans-serif;
+}
+
+code {
+  font-family: 'Epilogue', sans-serif;
+}
+.App{
+  height: 100Vh;
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  padding-bottom: 5em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas: 'nav nav'
+                       'box pic';
+}
+.nav{
+   grid-area: nav;
+   /* background-color: red; */
+   display: flex;
+   cursor: pointer;
+}
+.nav .span-text{
+  flex: 0.5;
+  /* background-color: blue; */
+  display: flex;
+  box-sizing: border-box;
+  /* justify-content: space-around; */
+
+}
+.arrdownicon{
+  margin-left: 5px;
+}
+.feature .feature-drop{
+  /* border: black solid 1px; */
+  position: absolute;
+  width: 120px;
+  padding: 17px 0;
+  border-radius: 10px;
+  background-color:white;
+  box-shadow: gray 1em 1em 3em;
+  left: -5.5em;
+  top: 3em;
+  
+}
+.disblock{
+  display: block;
+}
+.disnone{
+  display: none;
+}
+.feature .feature-drop img{
+  margin-right: 13px;
+}
+.feature div{
+  margin-bottom: 10px;
+}
+.nav .menuicon{
+  display: none;
+}
+.feature{
+  position: relative;
+  cursor: pointer;
+}
+.company-drop{
+  position: absolute;
+  /* border: black solid 1px; */
+  padding: 10px;
+  border-radius: 10px;
+  background-color:white;
+  box-shadow: gray 1em 1em 3em;
+  left: 25em;
+  top: 5em;
+}
+.company-drop div{
+  margin-bottom: 10px;
+
+}
+.company{
+  cursor: pointer;
+}
+.nav .span-text div{
+  align-self: center;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-left: 2em;
+  
+}
+.nav .nav-box{
+  /* background-color:pink; */
+  flex: 3;
+  display: flex;
+  
+}
+.nav .nav-box .navigation{
+  display: flex;
+  /* background-color: yellow; */
+  flex: 2;
+  align-items: center;
+}
+.navigation div{
+  margin-left: 1em;
+}
+.navigation .shift{
+  margin-left: 4em;
+}
+.nav div:nth-child(2) .auth{
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: gray; */
+  flex: 1;
+  align-items: center;
+}
+.cancelbox{
+  display: none;
+}
+.auth div{
+  margin-right: 1.2em;
+}
+.auth .register{
+  border: black 1px solid;
+  padding: 0.6em 1.4em;
+  border-radius: 9px;
+}
+.pic{
+  grid-area: pic;
+  /* background-color: black; */
+  background-image: url(./images/image-hero-desktop.png);
+  background-size: 30rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box{
+  grid-area: box;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content:space-around;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 8em;
+ 
+}
+.box div:first-child{
+  font-size: 5rem;
+  font-weight: 500;
+}
+.box div:nth-of-type(2){
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.box div:nth-of-type(3){
+  border: black solid 1px;
+ padding: 0.6em 1em;
+ font-size: 1.5rem;
+ font-weight: 500;
+  width: fit-content;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+span{
+  display: block;
+}
+.box div:nth-of-type(4){
+  display: flex;
+  
+  box-sizing: border-box;
+  /* padding-right: 17em; */
+}
+.box div:nth-of-type(4) img{
+  width: 5em;
+  margin-right: 2em;
+}
+@media(max-width:960px){
+  html{
+    font-size:  1.4vw;
+  }
+  .App{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    grid-template-areas: 'nav'
+                         'pic'
+                         'box';
+  }
+  .box{
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  span{
+    display: inline;
+  }
+  .learn{
+    align-self: center;
+  }
+  .remote{
+    /* align-items: center; */
+    
+    font-size: 3rem;
+  }
+  .box div:first-child{
+    font-size: 4rem;
+   
+  }
+  .pic{
+    background-size: 40rem 20rem;
+  }
+}
+@media(max-width:549px){
+  html{
+    font-size: clamp(10px,2.8vw,16px);
+  }
+  .nav .nav-box{
+    position: absolute;
+    flex-direction: column;
+    inset: 0 0 0 30%;
+    display: flex;
+    border: whitesmoke solid;
+  }
+  .cancelbox{
+    background-color: white;
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0.2;
+  }
+  .nav{
+    /* position: relative; */
+    /* border: black solid 1px; */
+    display: flex;
+    margin-top: 1em;
+
+  }
+  .nav .nav-box .navigation{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .nav div:nth-child(2) .auth{
+    background-color: white;
+    flex: 1.5;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav .menuicon{
+    display: block;
+  }
+  .nav .span-text{
+    /* border: black solid 1px; */
+    flex: 1;
+    justify-content: space-between;
+  }
+  .nav .span-text div{
+    padding-left: 0;
+  }
+  .box{
+    padding-left: 0;
+    align-items: center;
+  }
+  .box div:nth-of-type(4){
+    padding-left: 1em;
+  }
+  .feature .feature-drop{
+    position: static;
+    background-color: white;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 2em;
+  }
+  .company .company-drop{
+    position: static;
+    margin-top: 2em;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .navigation div{
+    margin-bottom: 1em;
+  }
+  .auth .register{
+    padding: 0.7em 5em;
+    margin-left: 1em;
+    margin-top: 1em;
+  }
+  .feature{
+    position: static;
+  }
+  .nav .disflex{
+    display: flex;
+  }
+  .nav .disnone{
+    display: none;
+  }
+  .navigation .shift{
+    margin-left: 1em;
+  }
+}
